@@ -19,7 +19,7 @@ class _ImagePickerDemoState extends State<ImagePickerDemo> {
       source: ImageSource.gallery,
       imageQuality: 100,
     );
-    file = File(xFile!.path);
+    file = xFile != null ? File(xFile.path) : null;
     setState(() {});
   }
 
@@ -28,7 +28,7 @@ class _ImagePickerDemoState extends State<ImagePickerDemo> {
       source: ImageSource.camera,
       imageQuality: 100,
     );
-    file = File(xFile!.path);
+    file = xFile != null ? File(xFile.path) : null;
     setState(() {});
   }
 

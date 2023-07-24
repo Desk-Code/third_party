@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:third_party/image_picker/image_picker_demo.dart';
+import 'package:third_party/image_picker/task_image_picker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ImagePickerDemo(),
+      home: const MultiImageSelect(),
     );
   }
 }
