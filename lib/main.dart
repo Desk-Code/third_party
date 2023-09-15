@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:third_party/image_picker/task_image_picker.dart';
+import 'package:third_party/razor_pay/razor_pay_demo.dart';
+import 'package:third_party/shared_preference/counter_shared.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CounterShared.init;
   runApp(const MyApp());
 }
 
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MultiImageSelect(),
+      home: const RazorPayDemo(),
     );
   }
 }
